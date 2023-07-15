@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 public class CarRepository {
-    private List<Car> list = new ArrayList<>(
+    private static List<Car> list = new ArrayList<>(
             List.of(new Car("Mercedes","DE234234"),
                     new Car("BMW","DU23432"),
                     new Car("AUDI","GB23434"),
@@ -20,4 +20,9 @@ public class CarRepository {
         return list;
     }
 
+    public Optional<Car> findByID(Long id) {
+        return list.stream()
+                .filter(a->a.getId().equals(id))
+                .findFirst();
+    }
 }

@@ -36,4 +36,5 @@ public class Car {
         this.number = number;
 
     }
+    public Car(){}
 }
