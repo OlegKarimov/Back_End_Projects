@@ -10,7 +10,7 @@ public class NameLengthValidatorImpl implements NameValidator {
 
     private final int minLength;
 
-    public NameLengthValidatorImpl(@Value("${min.name.length}") int minLength) {
+    public NameLengthValidatorImpl(@Value("${min.name.length}") Integer minLength) {
 
         this.minLength = minLength;
     }

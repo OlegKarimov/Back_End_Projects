@@ -21,7 +21,7 @@ public class ProductsServiceImpl implements ProductsService {
     private final NameValidator nameValidator;
 
     @Override
-    public void signUp(Long id, String name, int quantity, boolean valid) {
+    public void signUp(Long id, String name, Integer quantity, Boolean valid) {
 
         nameValidator.validate(name);
 

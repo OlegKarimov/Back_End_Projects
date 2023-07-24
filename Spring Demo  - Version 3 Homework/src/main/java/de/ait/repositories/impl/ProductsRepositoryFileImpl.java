@@ -28,7 +28,7 @@ public class ProductsRepositoryFileImpl implements ProductsRepository {
             writer.write(product.getId() + "#" +
                     product.getName() + "#" +
                     product.getQuantity() + "#" +
-                    product.isValid());
+                    product.getValid());
         } catch (IOException e) {
             throw new IllegalArgumentException("Проблемы с файлом");
         }
