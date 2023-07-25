@@ -25,4 +25,32 @@ GET localhost:8080/api/users
 
 
 
+### Добавление события 1
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+  "email": "alisher@gmail.com",
+  "event": "День рождения"
+}
+
+### Добавление события 2
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+"email": "alisher@gmail.com",
+"event": "Покупки"
+}
+
+
+
+### Получение событий
+GET http://localhost:8080/api/events/email
+
+
+
+
+
+
 

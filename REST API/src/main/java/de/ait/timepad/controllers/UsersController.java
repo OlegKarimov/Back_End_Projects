@@ -25,11 +25,13 @@ public class UsersController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public UserDto addUser(@RequestBody NewUserDto newUser) {
+
         return usersService.addUser(newUser);
     }
 
     @GetMapping
     public UsersDto getAllUsers() {
-        return usersService.getAllUsers();
+        return
+                usersService.getAllUsers();
     }
 }
