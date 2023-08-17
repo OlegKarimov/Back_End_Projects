@@ -50,7 +50,7 @@ public class TaskDto {
         }
 
         if (task.getStartDate() != null) {
-            result.setStartDate(task.getFinishDate().toString());
+            result.setStartDate(task.getStartDate().toString());
         }
 
         if (task.getFinishDate() != null) {

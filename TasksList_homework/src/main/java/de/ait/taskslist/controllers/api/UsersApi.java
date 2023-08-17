@@ -128,6 +128,7 @@ public interface UsersApi {
     @ResponseStatus(HttpStatus.CREATED) //метод вернет статус `201 CREATED`
     ResponseEntity<TaskDto> addTask(@Parameter(required = true, description = "Идентификатор пользователя", example = "2")
                                     @PathVariable("user-id") Long userId,
+//                                    @RequestBody NewTaskDto newTask);
                                     @RequestBody @Valid NewTaskDto newTask);
 
 }

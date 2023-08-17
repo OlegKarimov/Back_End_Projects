@@ -5,6 +5,7 @@ import de.ait.taskslist.validation.constraints.CorrectDates;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 /**
@@ -18,8 +19,8 @@ public class TaskDatesValidator implements ConstraintValidator<CorrectDates, New
     @Override
     public boolean isValid(NewTaskDto taskDto, ConstraintValidatorContext constraintValidatorContext) {
         try {
-            LocalTime startDate = LocalTime.parse(taskDto.getStartDate());
-            LocalTime finishDate = LocalTime.parse(taskDto.getFinishDate());
+            LocalDate startDate = LocalDate.parse(taskDto.getStartDate());
+            LocalDate finishDate = LocalDate.parse(taskDto.getFinishDate());
 
             return startDate.isBefore(finishDate);
         } catch (RuntimeException e) {

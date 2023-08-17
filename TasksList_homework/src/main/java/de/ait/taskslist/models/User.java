@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @EqualsAndHashCode(exclude = "tasks")
+@ToString(exclude = "tasks")
 @Entity
 @Table(name = "account")
 public class User {
@@ -39,6 +40,7 @@ public class User {
 
     private String email;
     private String password;
+    private String hashPassword;
 
     @Enumerated(value = EnumType.STRING)
     private Role role;

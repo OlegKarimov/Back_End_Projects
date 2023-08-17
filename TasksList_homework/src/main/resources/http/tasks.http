@@ -6,7 +6,7 @@ Content-Type: application/json
 {
   "description" : "Сходить в магазин за покупками",
   "title" : "Задание от жены",
-  "startDate": "2023-05-10",
+  "startDate": "2025-05-10",
   "finishDate": "2025-08-11"
 }
 
@@ -19,7 +19,7 @@ Content-Type: application/json
 {
   "description" : "Вынести мусор",
   "title" : "Задание от жены",
-  "startDate": "2023-09-10",
+  "startDate": "2020-09-10",
   "finishDate": "2022-09-11"
 }
 
@@ -32,8 +32,8 @@ Content-Type: application/json
 {
   "description" : "Помыть посуду",
   "title" : "Задание от жены",
-  "startDate": "2021-10-10",
-  "finishDate": "2022-10-11"
+  "startDate": "2022-10-10",
+  "finishDate": "2021-10-11"
 }
 
 

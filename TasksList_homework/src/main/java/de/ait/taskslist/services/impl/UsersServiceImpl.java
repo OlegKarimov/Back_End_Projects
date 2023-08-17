@@ -7,6 +7,8 @@ import de.ait.taskslist.models.User;
 import de.ait.taskslist.repositories.UsersRepository;
 import de.ait.taskslist.services.UsersService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,11 +22,19 @@ public class UsersServiceImpl implements UsersService {
 
     private final UsersRepository usersRepository;
 
+    private final PasswordEncoder passwordEncoder;
+
+    @Value("${users.sort.fields}")
+    private List<String> sortFields;
+
+    @Value("${users.filter.fields}")
+    private List<String> filterFields;
+
     @Override
     public UserDto addUser(NewUserDto newUser) {
         User user = User.builder()
                 .email(newUser.getEmail())
-                .password(newUser.getPassword())
+                .hashPassword(passwordEncoder.encode(newUser.getPassword()))
                 .role(User.Role.USER)
                 .state(User.State.NOT_CONFIRMED).build();
 
